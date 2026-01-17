@@ -1,6 +1,8 @@
 pandas
-matplotlib
 numpy
+matplotlib
+streamlit
 openpyxl
+
 
 
