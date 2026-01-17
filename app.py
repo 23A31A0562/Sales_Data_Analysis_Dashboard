@@ -1,5 +1,9 @@
 import streamlit as st
 import pandas as pd
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from sales_analyzer.data_loader import DataLoader
 from sales_analyzer.data_cleaner import DataCleaner
 from sales_analyzer.analyzer import SalesAnalyzer
@@ -35,3 +39,4 @@ if uploaded_file:
 
     st.subheader("📊 Sales by Category")
     st.bar_chart(category)
+
