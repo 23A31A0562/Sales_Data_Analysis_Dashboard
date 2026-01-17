@@ -3,11 +3,13 @@ import pandas as pd
 import sys
 import os
 
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, ROOT_DIR)
 from sales_analyzer.data_loader import DataLoader
 from sales_analyzer.data_cleaner import DataCleaner
 from sales_analyzer.analyzer import SalesAnalyzer
 from sales_analyzer.visualizer import Visualizer
+from sales_analyzer.reporter import Reporter
 
 st.set_page_config(page_title="Sales Data Analysis Dashboard", layout="wide")
 
@@ -39,4 +41,5 @@ if uploaded_file:
 
     st.subheader("📊 Sales by Category")
     st.bar_chart(category)
+
 
